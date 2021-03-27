@@ -8,6 +8,7 @@ RUN apk update \
 
 RUN git clone --single-branch --branch node https://github.com/MrAngus666/airnode.git
 WORKDIR /airnode
+RUN cat package.json
 
 RUN npm install -g ts-node
 RUN yarn add dotenv
