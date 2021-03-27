@@ -1,4 +1,4 @@
-FROM node:14.16.0-alpine3.12
+FROM node:14.16.0-alpine3.13
 
 ENV NODE_ENV production
 
@@ -6,7 +6,7 @@ RUN apk update \
     && apk add git \
     && apk add strace
 
-RUN git clone --single-branch --branch node https://github.com/MrAngus666/airnode.git
+RUN git clone --single-branch --branch pre-alpha https://github.com/api3dao/airnode.git
 WORKDIR /airnode
 
 RUN cat package.json
